@@ -16,12 +16,15 @@ $ npm install render-json
 * Possibility to define common params once and overwrite on each render
 * Use value if variable fills whole string:
     * template:
+    
         ```javascript
         {
             person: '${personalData}'
         }
         ```
+        
     * params:
+    
         ```javascript
         {
             personalData: {
@@ -31,7 +34,9 @@ $ npm install render-json
             }
         }
         ```
+        
     * result:
+    
         ```javascript
         {
             person: {
@@ -41,14 +46,18 @@ $ npm install render-json
             }
         }
         ```
+        
 * Stringify values if inside string
     * template:
+    
         ```javascript
         {
             person: 'Personal data: ${personalData}'
         }
         ```
+        
     * params:
+    
         ```javascript
         {
             personalData: {
@@ -58,7 +67,9 @@ $ npm install render-json
             }
         }
         ```
+        
     * result:
+    
         ```javascript
         {
             person: 'Personal data: {"name":"John","age":30,"male":true}'
