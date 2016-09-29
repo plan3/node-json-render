@@ -1,0 +1,36 @@
+{
+    "name": "render-json",
+    "version": "0.0.1",
+    "description": "Simple tool to render valid JSON from a valid JSON template with variables wrapped like ${variable} inside string values",
+    "main": "index.js",
+    "directories": {
+        "lib": "./lib",
+        "test": "./test",
+        "examples": "./examples"
+    },
+    "scripts": {
+        "test": "NODE_ENV=testing mocha",
+        "lint": "eslint .",
+        "nsp": "nsp check"
+    },
+    "keywords": [
+        "json",
+        "template"
+    ],
+    "author": "Tomasz Łukasik <tomasz.lukasik@schibsted.pl>",
+    "license": "ISC",
+    "dependencies": {
+        "lodash.isplainobject": "4.0.6",
+        "lodash.uniq": "4.5.0",
+        "lodash.update": "4.10.2"
+    },
+    "devDependencies": {
+        "chai": "3.5.0",
+        "chai-as-promised": "6.0.0",
+        "eslint": "3.6.1",
+        "eslint-config-vgno": "7.0.0",
+        "eslint-plugin-promise": "2.0.1",
+        "mocha": "3.1.0",
+        "nsp": "2.6.1"
+    }
+}

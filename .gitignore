@@ -1,0 +1,12 @@
+npm-debug.log
+*.log
+*.pid
+*.seed
+logs
+pids
+node_modules
+jspm_packages
+.npm
+.node_repl_history
+
+.idea
