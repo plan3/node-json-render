@@ -1,0 +1,27 @@
+{
+    "whole": "{whole}",
+    "partial_start": "{partial_start} should be matched",
+    "partial_middle": "This {partial_middle} should be matched",
+    "partial_end": "Should match {partial_end}",
+    " with spaces ": "Should match also { with spaces }",
+    "multiple": "Should match {multiple_1} and {multiple_2}",
+    "nested": "Should {match {most {nested_1}} & {nested_2}} only",
+    "repeated": "Should match this {value} and that {value}. The {value} also.",
+    "object": {
+        "object_whole": "{object_whole}",
+        "object_partial": "This is {object_partial} match",
+        "array_in_object": [
+            "Search in {array_in_object}"
+        ]
+
+    },
+    "array": [
+        "Lookup array",
+        "{array_whole}",
+        "Find {array_partial} too",
+        {
+            "object_in_array": "Search on {object_in_array} too"
+        }
+    ],
+    "no_match": "There should be |no_match}"
+}

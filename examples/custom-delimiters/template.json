@@ -1,0 +1,32 @@
+{
+    "whole": "`whole`",
+    "object_whole": "`object_whole`",
+    "array_whole": "`array_whole`",
+    "partial_start": "`partial_start` should be replaced",
+    "partial_middle": "This `partial_middle` should be replaced",
+    "partial_end": "Should replace `partial_end`",
+    " with spaces ": "Should replace also ` with spaces `",
+    "multiple": "Should replace `multiple_1` and `multiple_2`",
+    "repeated": "Should replace this `repeated` and that `repeated`. The `repeated` also.",
+    "nested": "When using same delimiters `replacing `most `nested_1`` & `nested_2`` doesn't work",
+    "object": {
+        "object_whole": "`object_whole`",
+        "object_partial": "This is `object_partial` replacement",
+        "array_in_object": [
+            "Search in `array_in_object`"
+        ]
+    },
+    "array": [
+        "Lookup array",
+        "`array_whole`",
+        "Find `array_partial` too",
+        {
+            "object_in_array": "Replace on `object_in_array` too"
+        }
+    ],
+    "stringify": {
+        "object": "`stringify_object` as part",
+        "array": "`stringify_array` as part"
+    },
+    "no_replacement": "There should be {no_replacement}"
+}
