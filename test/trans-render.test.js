@@ -33,10 +33,10 @@ describe('transformation and render', function() {
             object_whole: '{object}',
             array_whole: '{array}',
             object: {
-                object_whole: '{object}',
+                object_whole: '{object}'
             },
             array: [
-                '{array}',
+                '{array}'
             ]
         };
         const matched = [
@@ -51,10 +51,10 @@ describe('transformation and render', function() {
             object_whole: params.object,
             array_whole: params.array,
             object: {
-                object_whole: params.object,
+                object_whole: params.object
             },
             array: [
-                params.array,
+                params.array
             ]
         };
 
@@ -71,7 +71,7 @@ describe('transformation and render', function() {
         ];
 
         const expected = {
-            value: 'variable should be replaced. variable should be replaced and also variable',
+            value: 'variable should be replaced. variable should be replaced and also variable'
         };
 
         testStingle(template, matched, expected);

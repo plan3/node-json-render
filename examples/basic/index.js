@@ -14,16 +14,16 @@ const commonParams = {
 };
 
 const params1 = {
-    whole: 'whole',
-    partial_start: 'partial_start',
-    partial_middle: 'partial_middle',
-    partial_end: 'partial_end',
+    'whole': 'whole',
+    'partial_start': 'partial_start',
+    'partial_middle': 'partial_middle',
+    'partial_end': 'partial_end',
     ' with spaces ': ' with spaces ',
-    multiple_1: 'multiple_1',
-    multiple_2: 'multiple_2',
-    repeated: 'repeated',
-    nested_1: 'nested_1',
-    nested_2: 'nested_2'
+    'multiple_1': 'multiple_1',
+    'multiple_2': 'multiple_2',
+    'repeated': 'repeated',
+    'nested_1': 'nested_1',
+    'nested_2': 'nested_2'
 };
 
 const params2 = {
@@ -40,5 +40,5 @@ const params2 = {
 };
 
 const renderer = renderJson(commonParams);
-const json1 = renderer(template1, params1);
-const json2 = renderer(template2, params2);
+const json1 = renderer(template1, params1); // eslint-disable-line no-unused-vars
+const json2 = renderer(template2, params2); // eslint-disable-line no-unused-vars

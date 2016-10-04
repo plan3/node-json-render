@@ -17,7 +17,7 @@ describe('scan', function() {
 
         it('Should match whole string', function() {
             const template = {
-                whole: "{whole}"
+                whole: '{whole}'
             };
             const expected = [{path: ['whole'], matched: '{whole}'}];
             testSingle(template, regex, expected);
@@ -26,7 +26,7 @@ describe('scan', function() {
         it('Should match whole string nested in object', function() {
             const template = {
                 object: {
-                    object_whole: "{object_whole}"
+                    object_whole: '{object_whole}'
                 }
             };
             const expected = [{path: ['object', 'object_whole'], matched: '{object_whole}'}];
@@ -35,7 +35,7 @@ describe('scan', function() {
 
         it('Should match whole string nested in array', function() {
             const template = {
-                array: ["Lookup array", "{array_whole}"]
+                array: ['Lookup array', '{array_whole}']
             };
             const expected = [{path: ['array', '1'], matched: '{array_whole}'}];
             testSingle(template, regex, expected);
@@ -43,9 +43,9 @@ describe('scan', function() {
 
         it('Should match simple partials in string', function() {
             const template = {
-                partial_start: "{partial_start} should be matched",
-                partial_middle: "This {partial_middle} should be matched",
-                partial_end: "Should match {partial_end}"
+                partial_start: '{partial_start} should be matched',
+                partial_middle: 'This {partial_middle} should be matched',
+                partial_end: 'Should match {partial_end}'
             };
             const expected = [
                 {path: ['partial_start'], matched: ['{partial_start}']},
@@ -57,7 +57,7 @@ describe('scan', function() {
 
         it('Should match variable with spaces', function() {
             const template = {
-                " with spaces ": "Should match also { with spaces }"
+                ' with spaces ': 'Should match also { with spaces }'
             };
             const expected = [{path: [' with spaces '], matched: ['{ with spaces }']}];
             testSingle(template, regex, expected);
@@ -65,7 +65,7 @@ describe('scan', function() {
 
         it('Should match multiple variables in one string', function() {
             const template = {
-                multiple: "Should match {multiple_1} and {multiple_2}"
+                multiple: 'Should match {multiple_1} and {multiple_2}'
             };
             const expected = [{path: ['multiple'], matched: ['{multiple_1}', '{multiple_2}']}];
             testSingle(template, regex, expected);
@@ -73,7 +73,7 @@ describe('scan', function() {
 
         it('Should match most nested variables', function() {
             const template = {
-                nested: "Should {match {most {nested_1}} & {nested_2}} only"
+                nested: 'Should {match {most {nested_1}} & {nested_2}} only'
             };
             const expected = [{path: ['nested'], matched: ['{nested_1}', '{nested_2}']}];
             testSingle(template, regex, expected);
@@ -81,7 +81,7 @@ describe('scan', function() {
 
         it('Should match multiple occurrences of variable only once', function() {
             const template = {
-                repeated: "Should match this {value} and that {value}. The {value} also."
+                repeated: 'Should match this {value} and that {value}. The {value} also.'
             };
             const expected = [{path: ['repeated'], matched: ['{value}']}];
             testSingle(template, regex, expected);
@@ -90,9 +90,9 @@ describe('scan', function() {
         it('Should match variables nested in object', function() {
             const template = {
                 object: {
-                    object_partial: "This is {object_partial} match",
+                    object_partial: 'This is {object_partial} match',
                     array_in_object: [
-                        "Search in {array_in_object}"
+                        'Search in {array_in_object}'
                     ]
                 }
             };
@@ -106,10 +106,10 @@ describe('scan', function() {
         it('Should match variables nested in array', function() {
             const template = {
                 array: [
-                        "Lookup array",
-                        "Find {array_partial} too",
-                        {object_in_array: "Search on {object_in_array} too"}
-                    ]
+                    'Lookup array',
+                    'Find {array_partial} too',
+                    {object_in_array: 'Search on {object_in_array} too'}
+                ]
             };
             const expected = [
                 {path: ['array', '1'], matched: ['{array_partial}']},
@@ -120,7 +120,7 @@ describe('scan', function() {
 
         it('Should match nothing', function() {
             const template = {
-                no_match: "There should be |no_match}"
+                no_match: 'There should be |no_match}'
             };
             const expected = [];
             testSingle(template, regex, expected);
@@ -132,7 +132,7 @@ describe('scan', function() {
 
         it('Should match whole string', function() {
             const template = {
-                whole: "`whole`"
+                whole: '`whole`'
             };
             const expected = [{path: ['whole'], matched: '`whole`'}];
             testSingle(template, regex, expected);
@@ -140,9 +140,9 @@ describe('scan', function() {
 
         it('Should match simple partials in string', function() {
             const template = {
-                partial_start: "'`partial_start`' should be matched",
-                partial_middle: "This '`partial_middle`' should be matched",
-                partial_end: "Should match '`partial_end`'"
+                partial_start: '`partial_start` should be matched',
+                partial_middle: 'This `partial_middle` should be matched',
+                partial_end: 'Should match `partial_end`'
             };
             const expected = [
                 {path: ['partial_start'], matched: ['`partial_start`']},
@@ -154,7 +154,7 @@ describe('scan', function() {
 
         it('Should match multiple variables in one string', function() {
             const template = {
-                multiple: "Should match `multiple_1` and `multiple_2`"
+                multiple: 'Should match `multiple_1` and `multiple_2`'
             };
             const expected = [{path: ['multiple'], matched: ['`multiple_1`', '`multiple_2`']}];
             testSingle(template, regex, expected);
@@ -162,7 +162,7 @@ describe('scan', function() {
 
         it('Can\'t match most nested variables', function() {
             const template = {
-                nested: "Won't `match `only most `nested_1`` & `nested_2`` only"
+                nested: 'Won\'t `match `only most `nested_1`` & `nested_2`` only'
             };
             const expected = [{path: ['nested'], matched: ['`match `', '`nested_1`', '` & `']}];
             testSingle(template, regex, expected);
@@ -170,7 +170,7 @@ describe('scan', function() {
 
         it('Should match nothing', function() {
             const template = {
-                no_match: "There should be {no_match}"
+                no_match: 'There should be {no_match}'
             };
             const expected = [];
             testSingle(template, regex, expected);
