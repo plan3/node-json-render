@@ -1,0 +1,22 @@
+{
+    "object": {
+        "object_whole": "${object_whole}",
+        "object_partial": "This is ${object_partial} replacement",
+        "array_in_object": [
+            "Search in ${array_in_object}"
+        ]
+    },
+    "array": [
+        "Lookup array",
+        "${array_whole}",
+        "Find ${array_partial} too",
+        {
+            "object_in_array": "Replace on ${object_in_array} too"
+        }
+    ],
+    "stringify": {
+        "object": "${stringify_object} as part",
+        "array": "${stringify_array} as part"
+    },
+    "no_replacement": "There should be {no_replacement}"
+}
