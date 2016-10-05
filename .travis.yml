@@ -7,8 +7,8 @@ install:
   - npm install --registry $NPM_CONFIG_REGISTRY
 script:
   - npm run lint
-  - npm run test
   - npm run nsp
+  - npm run test
 branches:
   only:
   - master
