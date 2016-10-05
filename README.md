@@ -5,7 +5,7 @@ Simple tool to render valid JSON from a valid JSON template
 # Installation
 
 ```sh
-$ npm install render-json
+$ npm install render-jayson
 ```
 
 # Features
