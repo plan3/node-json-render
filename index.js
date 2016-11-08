@@ -14,8 +14,10 @@ const oneTime = (template, params, leftDelimiter, rightDelimiter) => {
     return render(subject, transformations, params);
 };
 
-module.exports = (commonParams, leftDelimiter, rightDelimiter) => (template, params) => {
-    return oneTime(template, Object.assign({}, commonParams, params), leftDelimiter, rightDelimiter);
+module.exports = function(commonParams, leftDelimiter, rightDelimiter) {
+    return function(template, params) {
+        return oneTime(template, Object.assign({}, commonParams, params), leftDelimiter, rightDelimiter);
+    };
 };
 
 module.exports.oneTime = oneTime;
