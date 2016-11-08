@@ -13,3 +13,5 @@ jspm_packages
 
 examples
 test
+/.travis.yml
+/.eslintrc
