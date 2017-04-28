@@ -1,6 +1,6 @@
 {
     "name": "render-jayson",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Simple tool to render valid JSON from a valid JSON template with variables wrapped like ${variable} inside string values",
     "main": "index.js",
     "directories": {
