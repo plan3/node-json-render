@@ -6,7 +6,12 @@ node_js:
 script:
   - npm run lint
   - npm run nsp
-  - npm run test
 branches:
   only:
   - master
+deploy:
+  provider: npm
+  email: billing.relate@schibsted.media
+  on:
+    branch: master
+    node: '6'
