@@ -1,14 +1,19 @@
 language: node_js
 node_js:
-  - 6
-  - 5
-  - 4
-install:
-  - npm install --registry $NPM_CONFIG_REGISTRY
+- 6
+- 5
+- 4
 script:
-  - npm run lint
-  - npm run nsp
-  - npm run test
+- npm run lint
+- npm run nsp
 branches:
   only:
   - master
+deploy:
+  provider: npm
+  email: billing.relate@schibsted.media
+  on:
+    branch: master
+    node: '6'
+  api_key:
+    secure: 1AhjpT04nFjWYaWntCbq+iXrbPWLr53+JNVDVJwRgcRxKp7Wbo8EZ4naHcUQcpM6ieJDlSlN/cnTqNmM0ubdx+nWPDfY2j5oEHDw66ewfVBkZW9W58FRWqXFaFo/neQrg6LBH+zTg+hZ9WG2dMb/PHccJcMuT7FydKOsP0h8wfm65mfOWD5RL1dbvvlpjNqrzSyti48/PnZnWGwQn96sm+eBjKd80m0VMDBUHyISUBFWVW/VN1soMqQSae4z0cwJzqqsKvgZArDfYXhmPIZECGnkrJj+V8RnJANpb6Ix6LtaPThSqBJBOK7PrUmxKL1ZgQGces0FUZ0RDxeex4TYqVRuimmfYvoY2v6KSpGQwFs2SGqvnwMuB6C65zfvI7G999H+Tl27ByUq7NDWLPSmUNG7IVTD527+GueRGvJPHspaPvev1ZXjSVQbsFhAMk/kHlP+YVRoosoRBsji4RgUlb5JkBUGtksvEgdZimOT7070+S65cufsYXT/Hk+zw8v5IKKxVhUak1INDF7wt3GrdtHW9Sp2HAPsRN/+GVBE/slqkYPXNuZQxeXZX+Cgg6EWX4MuWRpCbqicMsGsjGyCRjZhPbFD7YZuq4Ep0ET9HM2kv8+LuPquSkzAT0abxUzD/OozH03vNHdW13KIDFSw+th0ZE5axF9YZkSg7DRvgUM=

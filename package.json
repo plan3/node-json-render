@@ -13,10 +13,6 @@
         "lint": "eslint .",
         "nsp": "nsp check"
     },
-    "repository": {
-        "type": "git",
-        "url": "git@github.schibsted.io:spt-mediaplatform/node-render-json.git"
-    },
     "keywords": [
         "json",
         "template"
